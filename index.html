@@ -20,7 +20,7 @@
 <body>
    
         <!-- Header -->
-    <header class="header-box ">
+    <header class="header-box">
         <div class="nav-container container">
         <nav class="navbar">
             <a href="#" class="logo"><span class="accent">Web</span>Studio
@@ -32,14 +32,16 @@
             </ul>
         </nav>
         <ul class="contacts-links">
-            <li class="contact-item"><a href="mailto:info@devstudio.com" class="contacts-link"><svg class="icon-envelope" width="16"
-                        height="12">
+            <li class="contact-item">
+                <a href="mailto:info@devstudio.com" class="contacts-link"><svg class="icon-envelope" width="16" height="12">
                         <use href="./images/icon-sprite/icons.svg#icon-envelope"></use>
-                    </svg>info@devstudio.com</a></li>
+                    </svg>info@devstudio.com</a>
+                </li>
             <li class="contact-item"><a href="tel:+380961111111" class="contacts-link"><svg class="icon-smartphone" width="10" height="16">
                <use href="./images/icon-sprite/icons.svg#icon-smartphone"></use>
-           </svg> +38 096 111 11 11</a></li>
-           
+           </svg> +38 096 111 11 11</a>
+        </li>
+            
         </ul>
         </div>
     </header>
@@ -47,9 +49,11 @@
                
         <!-- Hero -->
         <section class="hero-box">
-            <div class="container">
+                    <div class="container" >
             <h1 class="title-hero">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" name="Заказать услугу" class="hero-btn">Заказать услугу</button>
+            <button type="button" name="Заказать услугу" class="hero-btn" data-modal-open>Заказать услугу</button>
+            
+
             </div>
         </section>
         <!--Advantages  -->
@@ -109,9 +113,19 @@
             <div class="container">
             <h2 class="title">Чем мы занимаемся</h2>
             <ul class="work-list">
-                <li class="work-item"><img src="./images/work/box-1.jpg" alt="Десктопные приложения" width="370"></li>
-                <li class="work-item"><img src="./images/work/box-2.jpg" alt="Мобильные приложения" width="370"></li>
-                <li class="work-item"><img src="./images/work/box-3.jpg" alt="Дизайнерские решения" width="370"></li>
+               
+                <li class="work-item work-desk"><img src="./images/work/box-1.jpg" alt="Десктопные приложения" width="370">
+                    <div class="work-text"><p>Десктопные приложения</p>
+                    </div>
+                </li>
+                <li class="work-item"><img src="./images/work/box-2.jpg" alt="Мобильные приложения" width="370">
+                    <div class="work-text"><p>Мобильные приложения</p>
+                    </div>
+                </li>
+                <li class="work-item"><img src="./images/work/box-3.jpg" alt="Дизайнерские решения" width="370">
+                    <div class="work-text"><p>Дизайнерские решения</p>
+                    </div>
+                </li>
             </ul>
             </div>
     
@@ -316,11 +330,11 @@
                 <li class="address-item">
                     <p class="list-text text-white">г. Киев, пр-т Леси Украинки, 26</p>
                 </li>
-                <li class="address-item">
-                    <a href="tel:+380961111111" class="list-text">+38 096 111 11 11</a>
+                <li class="address-item address-tel">
+                    <a href="tel:+380961111111" class="list-text footer-contact">+38 096 111 11 11</a>
                 </li>
                 <li class="address-item">
-                    <a href="mailto:info@devstudio.com" class="list-text">info@devstudio.com</a>
+                    <a href="mailto:info@devstudio.com" class="list-text footer-contact">info@devstudio.com</a>
                 </li>
             </ul>
         </address>
@@ -363,8 +377,16 @@
         
     
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p></p>
+            <button type="button" name='' class="close" data-modal-close>
+                
+            </button>
+        </div>
+    </div>
     
-
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
